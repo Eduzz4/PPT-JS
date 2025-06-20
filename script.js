@@ -1,5 +1,6 @@
 console.log("Bem-vindo ao jogo de Pedra, Papel e Tesoura!");
 console.log("Esse jogo terá 5 rodadas com sistema de pontuação");
+console.log("Para acessar a pontuação, digite: checkScore()");
 console.log("Para começar digite: playGame()");
 
 function playGame() {
@@ -42,6 +43,12 @@ function playGame() {
   console.log(`Computador escolheu: ${computerChoice}`);
 
   playRound(humanChoice, computerChoice);
+  return "Rodada concluída!";
 }
+
+  function checkScore() {
+    return `Placar: Você ${humanScore} - ${computerScore} Computador`;
+  }
+
 let humanScore = 0;
 let computerScore = 0;
