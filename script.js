@@ -10,11 +10,10 @@ function getComputerChoice() {
   }
 }
 
-console.log(getComputerChoice());
-
 function getHumanChoice() {
     let choice = prompt("pedra, papel ou tesoura?");
     return choice;
 }
 
 let humanChoice = getHumanChoice();
+console.log(getComputerChoice());
