@@ -15,9 +15,23 @@ function getComputerChoice() {
   }
 }
 
+// Escolha do usuário
+
 function getHumanChoice() {
-  let choice = prompt("pedra, papel ou tesoura?");
-  return choice;
+  do {
+    let choice = prompt("pedra, papel ou tesoura?");
+
+    if (choice === null) {
+      console.log("Faça uma escolha válida!");
+      continue;
+    }
+
+    choice = choice.trim().toLowerCase();
+
+    if (choice === "pedra" || choice === "papel" || choice === "tesoura") {
+      return choice;
+    }
+  } while (true);
 }
 
 function playRound(humanChoice, computerChoice) {
